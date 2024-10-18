@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking </title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Fredoka", sans-serif;
+        }
+
+        /* Shake Effect */
+        .shake:hover {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(0);
+            }
+
+            25% {
+                transform: translate(-5px);
+            }
+
+            50% {
+                transform: translate(5px);
+            }
+
+            75% {
+                transform: translate(-5px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-100">
+    <!-- First Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-yellow-500 text-lg font-bold mb-2 md:mb-0">
+                MyMovie
+            </div>
+
+            <!-- Search Bar -->
+            <div class="w-full md:w-auto flex items-center mb-2 md:mb-0 md:mr-4">
+                <input type="text" placeholder="Search your Movies, Events..." class="w-full md:w-80 px-4 py-2 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+            </div>
+
+            <!--Location -->
+            <div class="relative group mb-2 md:mb-0 md:mr-4">
+                <button class="bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none">
+                    Select Location in your place
+                </button>
+                <!--Location-Dropdown -->
+                <div class="absolute mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden group-hover:block">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Pathanamthitta</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Ernakulam</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Trivandrum</a>
+                </div>
+            </div>
+
+            <!-- Sign-In-->
+            <div>
+                <a href="#" class="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Navbar -->
+    <div class="bg-gray-700 p-3">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Left-->
+            <div class="flex space-x-4 text-white">
+                <a href="#" class="hover:text-yellow-500">Movies</a>
+                <a href="#" class="hover:text-yellow-500">Events</a>
+                <a href="#" class="hover:text-yellow-500">Premiers</a>
+                <a href="#" class="hover:text-yellow-500">Sports</a>
+            </div>
+
+            <!-- Right-->
+            <div class="flex space-x-4 text-white mt-2 md:mt-0">
+                <a href="#" class="hover:text-yellow-500">List Your Shows</a>
+                <a href="#" class="hover:text-yellow-500">Offers</a>
+                <a href="#" class="hover:text-yellow-500">Gift Cards</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended Movies -->
+    <div class="container mx-auto">
+    <h1 class="text-2xl font-bold text-center my-6">Recommended Movies</h1>
+
+    <!-- cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://moviegalleri.net/wp-content/uploads/2024/04/Rajinikanth-Vettaiyan-Movie-Release-Oct-2024-Poster-HD.jpg" alt="no images" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Vettaiyan</h2>
+                    <p class="text-gray-600">Action/Drama</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://www.businessoftollywood.com/wp-content/uploads/2024/01/arm.jpeg" alt="no images" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">A.R.M</h2>
+                    <p class="text-gray-600">Action/Adventure/Drama</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://preview.redd.it/official-poster-for-the-wild-robot-v0-8e2ychu5hjmc1.jpeg?auto=webp&s=29dbf15a1a4c4edcfc7972e3fdfb5537a60fc02c" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">The Wild Robot</h2>
+                    <p class="text-gray-600">Adventure/Animation/Family</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpt_Zq7whYNE9tDvbPI12cQHMm9cZYO8TCmg&s" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">
+                        Deadpool & Wolverine</h2>
+                    <p class="text-gray-600">Comedy</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://m.media-amazon.com/images/M/MV5BYzRiOWU3ZjYtMWUzNC00OTk4LWI2NDEtM2UzMjBhNzNmYTk0XkEyXkFqcGc@._V1_.jpg" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Bogainvillae</h2>
+                    <p class="text-gray-600">Crime/Thriller</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="https://i.ytimg.com/vi/0mTAscD4vt8/sddefault.jpg" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Moana 2</h2>
+                    <p class="text-gray-600">Action/Adventure</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Best of Live Events -->
+    <h1 class="text-2xl font-bold text-center my-6">Best of Live Events</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Event Cards-->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 shake">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vEnlhf5fsnOkO3qNkQ1X86fnZrXA7akpkA&s" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Live Concert</h2>
+                    <p class="text-gray-600">Music / Live</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Go Live</a>
+                </div>
+            </div>
+
+          
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 shake">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-XWhsHw2clbiOyD_NctlHJM6vSoYno4A3Ag&s" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Theater Performance</h2>
+                    <p class="text-gray-600">Drama / Live</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Go Live</a>
+                </div>
+            </div>
+
+           
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 shake">
+                <img src="https://www.theweek.in/content/dam/week/week/news/sports/images/2024/10/16/icc-hall-of-fame-abd-virat.jpg" alt="no image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Sports Event</h2>
+                    <p class="text-gray-600">Sports / Live</p>
+                    <a href="#" class="text-red-500 hover:underline mt-4 block">Go Live</a>
+                </div>
+            </div>
+    </div>
+    
+
+   <!-- Premier -->
+    <div class="bg-gray-700 py-8">
+    <div class="container mx-auto">
+        <h1 class="text-2xl text-white font-bold text-center mb-6 hover:text-yellow-500">Premiers</h1>
+        <h3 class="text-2xl  text-white text-center mb-6 hover:text-yellow-500">Watch movies at home & Brand new releases</h3>
+        <!-- Movies card-->
+        <div class="flex flex-wrap justify-center gap-6">
+           
+            <div class="flex-none w-64 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 bg-white">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjT5Bpr2GzA95VeEyU5iiHyUUhhwerKacCJg&s" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Skins Season 6</h2>
+                    <p class="text-gray-600">English</p>
+                </div>
+            </div>
+
+            <div class="flex-none w-64 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 bg-white">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRd-PquLDWcFXxsB4PwT9Lymz1gAWgeeYTJQ&s" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">May December</h2>
+                    <p class="text-gray-600">English</p>
+                </div>
+            </div>
+
+            <div class="flex-none w-64 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 bg-white">
+                <img src="https://m.media-amazon.com/images/M/MV5BMzM0MjEzNTI1N15BMl5BanBnXkFtZTgwODQyOTM4MzE@._V1_.jpg" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Fighter in the Wind</h2>
+                    <p class="text-gray-600">Korean</p>
+                </div>
+            </div>
+
+            <div class="flex-none w-64 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 bg-white">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ90EDJUiQ43UQubQ4EIfYMV1E7BiURvJIXfQ&s" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold mb-2">Nightwatch : Demons forever</h2>
+                    <p class="text-gray-600">English</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white flex justify-between items-center px-4 py-4">
+    <div class="text-sm hover:text-yellow-500">© Copyright. All rights reserved | Designed by Amritha</div>
+    <div class="flex space-x-4">
+        <a href="#" class="hover:text-yellow-500">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="hover:text-yellow-500">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#"  class="hover:text-yellow-500"> 
+        <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        <a href="#" class="hover:text-yellow-500">
+            <i class="fa-brands fa-google"></i>
+        </a>
+    </div>
+    </footer>
+
+</body>
+
+</html>
